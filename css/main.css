@@ -1,0 +1,101 @@
+section {
+  padding: 130px 0;
+}
+
+#mainVisual {
+  position: relative;
+  height: calc(100vh - 60px);
+  overflow: hidden;
+}
+#mainVisual .mainBgContainer {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+#mainVisual .mainBgContainer .mainBg {
+  display: flex;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  transform: scaleX(1.1);
+}
+#mainVisual .mainBgContainer .mainBg iframe {
+  display: block;
+  position: absolute;
+  width: 1700px;
+  height: 1000px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#mainVisual .mainDescContainer {
+  position: relative;
+  height: 100vh;
+}
+#mainVisual .mainDescContainer ul {
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+}
+#mainVisual .mainDescContainer ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 10px;
+  margin-left: 200px;
+  color: #fff;
+}
+#mainVisual .mainDescContainer ul li .chTitle {
+  font-size: 90px;
+  font-weight: 800;
+}
+#mainVisual .mainDescContainer ul li .chDesc {
+  padding-top: 20px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+#mainVisual .mainDescContainer ul li .btnContainer {
+  position: relative;
+  padding-top: 30px;
+}
+#mainVisual .mainDescContainer ul li .btnContainer a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+  height: 60px;
+  background-color: #f97290;
+  font-size: 17px;
+  font-weight: 600;
+}
+#mainVisual .mainDescContainer ul li .btnContainer .btnVideo {
+  margin-left: 20px;
+  background: none;
+  width: 160px;
+  border: 2px solid #fff;
+  box-sizing: border-box;
+}
+#mainVisual .scrollBtn {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#mainVisual .scrollBtn img {
+  width: 40px;
+  height: 40px;
+}
+#mainVisual .scrollBtn span {
+  display: block;
+  padding-top: 15px;
+  color: #ccc;
+  font-size: 18px;
+  font-weight: 700;
+}

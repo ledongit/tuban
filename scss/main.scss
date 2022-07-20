@@ -1,0 +1,104 @@
+@import "vars";
+@import "mixin";
+
+section {
+  padding: 130px 0;
+}
+
+#mainVisual {
+  position: relative;
+  height: calc(100vh - 60px);
+  overflow: hidden;
+  .mainBgContainer {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    .mainBg {
+      display: flex;
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+      transform: scaleX(1.1);
+      iframe {
+        display: block;
+        position: absolute;
+        width: 1700px;
+        height: 1000px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+  .mainDescContainer {
+    position: relative;
+    height: 100vh;
+    ul {
+      position: relative;
+      overflow: hidden;
+      z-index: 10;
+      li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin-top: 10px;
+        margin-left: 200px;
+        color: #fff;
+        .chTitle {
+          font-size: 90px;
+          font-weight: 800;
+        }
+        .chDesc {
+          padding-top: 20px;
+          font-size: 18px;
+          line-height: 1.5;
+        }
+        .btnContainer {
+          position: relative;
+          padding-top: 30px;
+          a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 280px;
+            height: 60px;
+            background-color: #f97290;
+            font-size: 17px;
+            font-weight: 600;
+          }
+          .btnVideo {
+            margin-left: 20px;
+            background: none;
+            width: 160px;
+            border: 2px solid #fff;
+            box-sizing: border-box;
+          }
+        }
+      }
+    }
+  }
+  .scrollBtn {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 40px;
+      height: 40px;
+    }
+    span {
+      display: block;
+      padding-top: 15px;
+      color: #ccc;
+      font-size: 18px;
+      font-weight: 700;
+    }
+  }
+}
