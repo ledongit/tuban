@@ -53,15 +53,24 @@
       <div class="copyright">
         <p>COPYRIGHT © TUBAn. ALL RIGHTS RESERVED.</p>
       </div>
-      <div class="topButton">
-        <span>TOP</span>
-      </div>
+      <a href="">
+        <div class="topButton">
+          <span>TOP</span>
+        </div>
+      </a>
     </div>
   </footer>
 </section>
 </main>
 
 <script>
+  const gnb = $("#gnb");
+  const menuBtn = $("#header .menuBtn .menuContainer");
+
+  menuBtn.on("click", function () {
+    gnb.toggleClass("open");
+  })
+
   const mainVisualSlider = new Swiper("#mainVisual .mainDescContainer", {
     spaceBetween: 20,
     centeredSlides: true,

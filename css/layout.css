@@ -80,6 +80,29 @@ button {
   top: 30px;
 }
 
+#gnb {
+  width: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+#gnb.open {
+  display: block;
+}
+#gnb .list {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#gnb .list li {
+  width: 500px;
+  text-align: left;
+  font-size: 35px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
 #headerLayout {
   position: fixed;
   z-index: 99;
@@ -308,9 +331,11 @@ button {
     right: 60px;
     background: none;
     left: auto;
+    width: 100px;
+    height: 50px;
   }
   #header .menuBtn .menuContainer {
-    padding: 20px;
+    padding: 5px;
     display: flex;
   }
   #header .menuBtn .menuContainer .menu {
