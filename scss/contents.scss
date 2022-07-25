@@ -1,0 +1,376 @@
+@import "vars";
+@import "mixin";
+
+.subvisual {
+  position: relative;
+  height: calc(100vh - 60px);
+  overflow: hidden;
+  .subvisualTxt {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1000px;
+    transform: translate(-50%, -50%);
+    p {
+      font-size: 80px;
+      font-weight: 700;
+      color: #fff;
+    }
+  }
+  .scrollBtn {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 30px;
+      height: 30px;
+    }
+    span {
+      display: block;
+      padding-top: 15px;
+      color: #ccc;
+      font-size: 18px;
+      font-weight: 700;
+    }
+  }
+}
+.about {
+  position: relative;
+  height: 130vh;
+  display: flex;
+  color: #fff;
+  .aboutTitle {
+    margin-top: 80px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    h2 {
+      display: flex;
+      justify-content: center;
+      font-size: 80px;
+      font-weight: 700;
+    }
+  }
+  .aboutTxt-side {
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%);
+    transform: rotate(-90deg);
+    opacity: 0.1;
+  }
+  .whoWeAre {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #222;
+    box-sizing: border-box;
+    padding-left: 120px;
+    h3 {
+      font-size: 45px;
+      font-weight: 700;
+    }
+    p {
+      margin-top: 30px;
+      line-height: 1.5;
+      color: #bbb;
+      word-break: keep-all;
+    }
+  }
+  .aboutBox {
+    width: 50%;
+    background-image: url("../images/contents/about/about-bg-02.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .aboutInner {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border: 10px solid #f97290;
+      width: 280px;
+      height: 460px;
+      position: relative;
+      .items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 30px 0;
+        &:after {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 140px;
+          height: 1px;
+          background-color: #f97290;
+          margin-top: 120px;
+        }
+        &:nth-last-child(1) {
+          &:after {
+            display: none;
+          }
+        }
+        span {
+          font-size: 20px;
+          font-weight: 600;
+        }
+        p {
+          font-size: 50px;
+          font-weight: 300;
+          color: #f97290;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+.whatwedo {
+  position: relative;
+  height: 120vh;
+  display: flex;
+  color: #fff;
+  .whatwedoTitle {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    h3 {
+      font-size: 50px;
+      font-weight: 700;
+    }
+  }
+  .whatTitle {
+    font-size: 40px;
+    font-weight: 300;
+  }
+  .whatDesc {
+    margin-top: 20px;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+  .whatItem {
+    display: flex;
+    flex-direction: column;
+    word-break: keep-all;
+    .item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0 110px 120px;
+    }
+  }
+  .dream {
+    width: 33.33%;
+    background-image: url("../images/contents/about/about-dream-bg.png");
+    background-repeat: no-repeat;
+    background-position: center 170px;
+    background-color: #008580;
+    margin-left: 60px;
+    justify-content: flex-end;
+  }
+  .create {
+    width: 33.33%;
+    background-image: url("../images/contents/about/about-create-bg.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-color: #2549a9;
+    .item {
+      margin: 300px 110px 0;
+    }
+  }
+  .passion {
+    width: 33.33%;
+    background-image: url("../images/contents/about/about-passion-bg.png");
+    background-repeat: no-repeat;
+    background-color: #f97290;
+    background-position: center 170px;
+    margin-right: 60px;
+    justify-content: flex-end;
+  }
+}
+
+@media all and (max-width: 1500px) {
+  #subvisual {
+    .subvisualTxt {
+      p {
+        font-size: 60px;
+      }
+    }
+  }
+  .whatwedo {
+    .whatItem {
+      .item {
+        margin: 0 60px 150px;
+      }
+    }
+    .create {
+      .item {
+        margin: 240px 60px 0;
+      }
+    }
+  }
+}
+@media all and (max-width: 1200px) {
+  #subvisual {
+    height: 100vh;
+  }
+  .about {
+    .whoWeAre {
+      padding-left: 50px;
+    }
+  }
+  .whatwedo {
+    .dream {
+      margin-left: 0px;
+    }
+    .passion {
+      margin-right: 0px;
+    }
+  }
+}
+@media all and (max-width: 940px) {
+  #subvisual {
+    .subvisualTxt {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+  .about {
+    height: 130vh;
+    flex-direction: column;
+    .aboutTxt-side {
+      display: none;
+    }
+    .whoWeAre {
+      width: 100%;
+      height: 130vh;
+      justify-content: flex-start;
+      padding-left: 0;
+      padding-top: 240px;
+      h3 {
+        display: flex;
+        justify-content: center;
+      }
+      p {
+        margin: 30px 50px 0;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        br {
+          display: none;
+        }
+      }
+    }
+    .aboutBox {
+      width: 100%;
+      background: none;
+      background-color: #222;
+      top: 65%;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      .aboutInner {
+        width: 500px;
+        height: 500px;
+        .items {
+          &:after {
+            width: 340px;
+          }
+        }
+      }
+    }
+  }
+  .whatwedo {
+    background-color: #222;
+    flex-direction: column;
+    overflow: hidden;
+    .whatwedoTitle {
+      z-index: 100;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+      top: 0;
+      left: 0;
+      transform: none;
+    }
+    .whatItem {
+      width: 100%;
+      height: 100%;
+      background-position: center right;
+      justify-content: center;
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 90px;
+        left: 0;
+        z-index: 1;
+        background: rgba(0, 0, 0, 0.2);
+      }
+      .item {
+        margin: 0;
+        padding-left: 50px;
+        z-index: 100;
+        p {
+          br {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+@media all and (max-width: 740px) {
+  #subvisual {
+    .scrollBtn {
+      bottom: 30px;
+      span {
+        font-size: 15px;
+      }
+    }
+  }
+  .about {
+    .aboutBox {
+      .aboutInner {
+        width: 400px;
+        height: 460px;
+        .items {
+          &:after {
+            width: 260px;
+          }
+        }
+      }
+    }
+  }
+  .whatwedo {
+    .whatItem {
+      .item {
+        padding-left: 20px;
+      }
+    }
+  }
+}

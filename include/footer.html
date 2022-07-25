@@ -1,0 +1,107 @@
+<section class="section">
+  <footer id="footer">
+    <ul class="footer-youtube">
+      <li class="youtubeList">
+        <a href="">
+          <img src="../images/common/footer-youtube-01.jpg" alt="" />
+          <p>[Official] The funniest slapstick - Larva Top 3</p>
+        </a>
+      </li>
+      <li class="youtubeList">
+        <a href="">
+          <img src="../images/common/footer-youtube-02.jpg" alt="" />
+          <p>[Official] Strange Inventions - Larva Top 3</p>
+        </a>
+      </li>
+      <li class="youtubeList">
+        <a href="">
+          <img src="../images/common/footer-youtube-03.jpg" alt="" />
+          <p>[Official] Jhon TV - 07 - DinoCore</p>
+        </a>
+      </li>
+      <li class="youtubeList">
+        <a href="">
+          <img src="../images/common/footer-youtube-04.jpg" alt="" />
+          <p>[Official] Season 1 Episode 7 Teaser - DinoCore</p>
+        </a>
+      </li>
+      <li class="youtubeList">
+        <a href="">
+          <img src="../images/common/footer-fb-tbumb.jpg" alt="" />
+          <p>#Pink and #Yellow A #To_Do_List for their date!</p>
+        </a>
+      </li>
+      <li class="youtubeList">
+        <a href="">
+          <img src="../images/common/footer-insta-thumb.jpg" alt="" />
+          <p>#Pink and #Yellow A #To_Do_List for their date!</p>
+        </a>
+      </li>
+    </ul>
+    <div class="footer-inner">
+      <div class="snsList">
+        <a href=""><span class="dot">YOUTUBE</span></a>
+        <a href=""><span class="dot">FACEBOOK</span></a>
+        <a href=""><span class="dot">INSTAGRAM</span></a>
+        <a href=""><span class="dot">BLOG</span></a>
+        <a href=""><span>TISTORY</span></a>
+      </div>
+      <div class="company-address">
+        <p>주소: 서울시 종로구 경희궁1길 1 투바앤빌딩</p>
+        <span>(우 : 03176)</span>
+      </div>
+      <div class="copyright">
+        <p>COPYRIGHT © TUBAn. ALL RIGHTS RESERVED.</p>
+      </div>
+      <div class="topButton">
+        <span>TOP</span>
+      </div>
+    </div>
+  </footer>
+</section>
+</main>
+
+<script>
+  const mainVisualSlider = new Swiper("#mainVisual .mainDescContainer", {
+    spaceBetween: 20,
+    centeredSlides: true,
+    speed: 1000,
+    effect: "fade",
+    fadeEffect: {
+      crossFade: true,
+      // observer: true,
+      // observeParents: true,
+    },
+    // loop: true,
+    pagination: {
+      el: "#mainVisual .pagination .bullets",
+      type: "bullets",
+      clickable: true,
+    },
+  });
+
+  const projectSlider = new Swiper("#project .swiperContainer", {
+    spaceBetween: 20,
+    centertedSlides: true,
+    speed: 1000,
+    // loop: true,
+  });
+
+  const newsSlider = new Swiper("#news .newsContainer", {
+    direction: "horizontal",
+    spaceBetween: 20,
+    centertedSlides: true,
+    speed: 1000,
+    slidesPerView: 1,
+    loop: false,
+  });
+
+  $("#main").fullpage({
+    scrollingSpeed: 700,
+    scrollHorizontally: true,
+    scrollBar: true,
+    responsiveWidth: 940
+  });
+</script>
+</body>
+</html>

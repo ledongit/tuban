@@ -2,10 +2,22 @@ section {
   padding: 130px 0;
 }
 
+.pgTitle {
+  font-size: 90px;
+  font-weight: 800;
+}
+
+.pgDesc {
+  padding-top: 20px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
 #mainVisual {
   position: relative;
   height: calc(100vh - 60px);
   overflow: hidden;
+  background-color: #193b90;
 }
 #mainVisual .mainBgContainer {
   overflow: hidden;
@@ -37,7 +49,8 @@ section {
 }
 #mainVisual .mainDescContainer ul {
   position: relative;
-  overflow: hidden;
+  margin-left: 220px;
+  margin-top: 40px;
   z-index: 10;
 }
 #mainVisual .mainDescContainer ul li {
@@ -45,18 +58,18 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin-top: 10px;
+  margin-top: 100px;
   margin-left: 200px;
   color: #fff;
 }
-#mainVisual .mainDescContainer ul li .chTitle {
-  font-size: 90px;
-  font-weight: 800;
+#mainVisual .mainDescContainer ul li.swiper-slide-visible {
+  opacity: 0 !important;
 }
-#mainVisual .mainDescContainer ul li .chDesc {
-  padding-top: 20px;
-  font-size: 18px;
-  line-height: 1.5;
+#mainVisual .mainDescContainer ul li.swiper-slide-active {
+  opacity: 1 !important;
+}
+#mainVisual .mainDescContainer ul li.swiper-slide-prev {
+  opacity: 0 !important;
 }
 #mainVisual .mainDescContainer ul li .btnContainer {
   position: relative;
@@ -81,16 +94,17 @@ section {
 }
 #mainVisual .scrollBtn {
   position: absolute;
-  bottom: 100px;
+  bottom: 60px;
   left: 50%;
+  transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 #mainVisual .scrollBtn img {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
 }
 #mainVisual .scrollBtn span {
   display: block;
@@ -98,4 +112,586 @@ section {
   color: #ccc;
   font-size: 18px;
   font-weight: 700;
+}
+
+#project {
+  height: calc(100vh - 60px);
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  align-items: center;
+}
+#project .projectBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#project .projectBg .bgPattern {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/main/project-bg.png");
+}
+#project .projectBg .bgColor {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #193b90;
+  z-index: -1;
+}
+#project .projectBg .bgCharacter {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+#project .projectBg .bgCharacter .bgLarva {
+  height: 100%;
+  background-image: url("../images/main/projet-jumbo-larva.png");
+  background-repeat: no-repeat;
+  background-position: 0 50px;
+}
+#project .projectContainer {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 200px;
+  margin-top: 100px;
+}
+#project .projectContainer .projectDesc {
+  color: #fff;
+}
+#project .swiperContainer {
+  display: flex;
+  position: relative;
+  flex-basis: 44%;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden;
+}
+#project .swiperContainer ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#project .swiperContainer ul li {
+  position: relative;
+  width: 210px !important;
+}
+#project .swiperContainer ul li a {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: auto;
+}
+#project .swiperContainer ul li a img {
+  max-width: 100%;
+  margin: auto;
+}
+#project .swiperContainer ul li a span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+}
+
+#news {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+#news .newsCharacter {
+  position: absolute;
+  top: 40px;
+  left: 200px;
+  width: 100%;
+  height: 50%;
+}
+#news .newsContainer {
+  position: relative;
+  top: 44%;
+  left: 50%;
+}
+#news .newsContainer ul li {
+  width: 370px !important;
+  position: relative;
+}
+#news .newsContainer ul li a .newsTitle {
+  display: -webkit-box;
+  height: 1.5em;
+  overflow: hidden;
+  line-height: 1.5;
+  -webkit-line-clamp: 1;
+  /* autoprefixer: off */
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  font-size: 30px;
+  font-weight: 600;
+}
+#news .newsContainer ul li a .newsDesc {
+  display: -webkit-box;
+  height: 3em;
+  overflow: hidden;
+  line-height: 1.5;
+  -webkit-line-clamp: 2;
+  /* autoprefixer: off */
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  font-size: 15px;
+  font-weight: 500;
+}
+#news .pgTitle {
+  position: relative;
+  top: 30%;
+  color: #2c99e4;
+  margin-left: 180px;
+  z-index: 10;
+}
+
+#contact {
+  position: relative;
+  height: 100vh;
+  background-color: #182548;
+  color: #fff;
+}
+#contact span {
+  font-size: 18px;
+  font-weight: 600;
+}
+#contact p {
+  font-size: 15px;
+  font-weight: 500;
+}
+#contact .firstLine {
+  display: flex;
+  justify-content: center;
+  height: 200px;
+  padding-top: 50px;
+  margin-top: 100px;
+}
+#contact .firstLine .borderLine {
+  border-bottom: 12px solid #fff;
+  box-sizing: border-box;
+}
+#contact .firstLine .borderLine:nth-child(1) {
+  border-right: 12px solid #fff;
+}
+#contact .firstLine .address {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 37%;
+  height: 100%;
+}
+#contact .firstLine .address span {
+  margin-top: 20px;
+}
+#contact .firstLine .address p {
+  margin-top: 20px;
+}
+#contact .firstLine .companyNumber {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 37%;
+  height: 100%;
+}
+#contact .firstLine .companyNumber p {
+  padding-left: 20px;
+  font-size: 45px;
+  font-weight: 700;
+}
+#contact .secondLine {
+  display: flex;
+  justify-content: center;
+}
+#contact .contactTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+  font-weight: 700;
+  width: 37%;
+  border-right: 12px solid #fff;
+  box-sizing: border-box;
+}
+#contact .contactInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 37%;
+}
+#contact .contactInfo .quarter {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+#contact .contactInfo .quarter li {
+  width: 50%;
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+#contact .contactInfo .quarter li .license {
+  padding-bottom: 14px;
+}
+#contact .contactInfo .quarter li div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#contact .contactInfo .quarter li p {
+  padding-top: 10px;
+}
+#contact .contactInfo .quarter .fax {
+  position: relative;
+}
+#contact .contactInfo .quarter .fax:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: -12px;
+  background-color: #182548;
+  width: 100%;
+  height: 25px;
+}
+#contact .contactInfo .quarter .mailInfo,
+#contact .contactInfo .quarter .employInfo {
+  border-left: 12px solid #fff;
+}
+#contact .contactInfo .quarter .madeInfo,
+#contact .contactInfo .quarter .employInfo {
+  border-top: 12px solid #fff;
+}
+
+@media all and (max-width: 1500px) {
+  .pgTitle {
+    font-size: 60px;
+  }
+  .pgDesc {
+    padding-top: 10px;
+    font-size: 14px;
+  }
+  #mainVisual .mainDescContainer ul {
+    margin-left: 170px;
+  }
+  #mainVisual .mainDescContainer ul li .btnContainer {
+    padding-top: 20px;
+  }
+  #mainVisual .mainDescContainer ul li .btnContainer a {
+    font-size: 15px;
+    width: 170px;
+    height: 40px;
+  }
+  #mainVisual .mainDescContainer ul li .btnContainer .btnVideo {
+    width: 120px;
+    margin-left: 10px;
+  }
+  #mainVisual .scrollBtn {
+    bottom: 30px;
+  }
+  #mainVisual .scrollBtn span {
+    padding-top: 15px;
+    font-size: 15px;
+  }
+  #project .projectContainer {
+    left: 170px;
+  }
+  #news .newsCharacter {
+    left: 170px;
+  }
+}
+@media all and (max-width: 1200px) {
+  #mainVisual {
+    height: 100vh;
+  }
+  #mainVisual .mainDescContainer ul {
+    margin-left: 90px;
+  }
+  #project {
+    height: 100vh;
+  }
+  #project .projectContainer {
+    left: 90px;
+  }
+  #project .swiperContainer ul li {
+    width: 150px !important;
+  }
+  #news .newsCharacter {
+    left: 90px;
+  }
+  #news .pgTitle {
+    margin-left: 90px;
+  }
+  #contact span {
+    font-size: 16px;
+  }
+  #contact p {
+    font-size: 13px;
+  }
+  #contact .contactTitle {
+    font-size: 60px;
+  }
+  #contact .firstLine .companyNumber p {
+    font-size: 40px;
+  }
+}
+@media all and (max-width: 940px) {
+  .fp-overflow.fp-table {
+    display: flex !important;
+  }
+}
+@media all and (max-width: 940px) and (max-height: 800px) {
+  #mainVisual .mainDescContainer ul li h3 {
+    display: none;
+  }
+  #mainVisual .mainDescContainer ul li p {
+    display: none;
+  }
+  #mainVisual .mainDescContainer ul li .btnContainer {
+    display: none;
+  }
+}
+@media all and (max-width: 940px) {
+  #mainVisual .mainBgContainer {
+    display: none;
+  }
+  #mainVisual .mainDescContainer {
+    background-color: #000;
+  }
+  #mainVisual .mainDescContainer ul {
+    margin-left: 0;
+  }
+  #mainVisual .mainDescContainer ul li {
+    align-items: center;
+    margin-top: 0px;
+  }
+  #mainVisual .mainDescContainer ul li img {
+    opacity: 0.5 !important;
+    z-index: -1;
+  }
+  #mainVisual .scrollBtn {
+    z-index: 10;
+  }
+  #mainVisual .pagination {
+    position: absolute;
+    top: 71%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+  }
+  #mainVisual .pagination .bullets .swiper-pagination-bullet {
+    border: 2.5px solid #fff;
+    margin: 4px;
+    width: 12px;
+    opacity: 1;
+    background: none;
+    height: 12px;
+  }
+  #mainVisual .pagination .bullets .swiper-pagination-bullet-active {
+    background: var(--swiper-pagination-color, var(--swiper-theme-color)) !important;
+  }
+}
+@media all and (max-width: 940px) {
+  #project .projectBg .bgCharacter {
+    display: none;
+  }
+  #project .swiperContainer {
+    flex-basis: auto;
+    margin-top: 200px;
+  }
+  #project .swiperContainer ul li {
+    width: 210px !important;
+  }
+  #project .projectContainer {
+    top: 10%;
+  }
+  #project .projectContainer .projectDesc {
+    width: 500px;
+  }
+  #project .projectContainer .projectDesc .pgTitle {
+    font-size: 70px;
+  }
+  #project .projectContainer .projectDesc .pgDesc {
+    word-break: keep-all;
+    font-size: 16px;
+  }
+  #project .projectContainer .projectDesc .pgDesc br {
+    display: none;
+  }
+}
+@media all and (max-width: 940px) {
+  #news {
+    height: 60vh;
+    overflow: hidden;
+  }
+  #news .pgTitle {
+    position: absolute;
+    top: 10%;
+    font-size: 70px;
+  }
+  #news .newsCharacter {
+    display: none;
+  }
+  #news .newsContainer {
+    top: 30%;
+    left: 5%;
+  }
+  #news .newsContainer ul li {
+    width: 350px !important;
+  }
+  #news .newsContainer ul li a img {
+    width: 100%;
+  }
+  #news .newsContainer ul li a .newsTitle {
+    margin-top: 20px;
+    font-size: 20px;
+  }
+  #news .newsContainer ul li a .newsDesc {
+    margin-top: 10px;
+    color: #333;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  #news .newsContainer ul li a .moreBtn {
+    display: none;
+  }
+}
+@media all and (max-width: 940px) {
+  #contact {
+    height: 120vh;
+  }
+  #contact li {
+    margin: 20px 0;
+  }
+  #contact .contactTitle {
+    font-size: 80px;
+    position: absolute;
+    top: 8%;
+    left: 50px;
+    border: none;
+  }
+  #contact .firstLine {
+    flex-direction: column;
+    margin-left: 40px;
+    margin-top: 170px;
+  }
+  #contact .firstLine .borderLine {
+    border-right: none !important;
+    border-bottom: 4px solid #fff;
+    padding-bottom: 20px;
+  }
+  #contact .firstLine .borderLine img {
+    display: none;
+  }
+  #contact .firstLine .companyNumber {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 95%;
+  }
+  #contact .firstLine .companyNumber p {
+    font-size: 30px;
+    padding-left: 0;
+    margin-top: 20px;
+  }
+  #contact .firstLine .address {
+    align-items: flex-start;
+    width: 95%;
+  }
+  #contact .contactInfo {
+    width: 100%;
+  }
+  #contact .contactInfo .quarter {
+    width: 100%;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+  #contact .contactInfo .quarter .fax:after {
+    display: none;
+  }
+  #contact .contactInfo .quarter .mailInfo,
+#contact .contactInfo .quarter .employInfo,
+#contact .contactInfo .quarter .madeInfo {
+    border-left: none;
+    border-top: none;
+  }
+  #contact .contactInfo .quarter li {
+    width: 90%;
+    height: 100%;
+    align-items: flex-start;
+    margin-left: 40px;
+    padding-bottom: 25px;
+    border-bottom: 0.7px solid #aaa;
+  }
+  #contact .contactInfo .quarter li div {
+    align-items: flex-start;
+  }
+  #contact .contactInfo .quarter li p {
+    z-index: 1;
+  }
+}
+@media all and (max-width: 740px) {
+  #mainVisual .mainDescContainer ul li h3 {
+    font-size: 40px;
+  }
+  #mainVisual .mainDescContainer ul li p {
+    font-size: 14px;
+  }
+  #mainVisual .mainDescContainer ul li .btnContainer .btnProject {
+    font-size: 12px;
+    width: 130px;
+    height: 40px;
+  }
+  #mainVisual .mainDescContainer ul li .btnContainer .btnVideo {
+    width: 110px;
+  }
+  #project {
+    height: 90vh;
+  }
+  #project .swiperContainer ul li a span {
+    height: 70px;
+    font-size: 15px;
+  }
+  #project .projectContainer {
+    top: 6%;
+    left: 40px;
+  }
+  #project .projectContainer .projectDesc {
+    width: 350px;
+  }
+  #project .projectContainer .projectDesc .pgTitle {
+    font-size: 30px;
+  }
+  #project .projectContainer .projectDesc .pgDesc {
+    font-size: 12px;
+  }
+  #news .pgTitle {
+    font-size: 30px;
+    margin-left: 40px;
+  }
+  #contact .contactTitle {
+    font-size: 30px;
+    left: 0;
+  }
 }
