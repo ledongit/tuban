@@ -1,3 +1,4 @@
+
 <section class="section">
   <footer id="footer">
     <ul class="footer-youtube">
@@ -64,13 +65,18 @@
 </main>
 
 <script>
+
   const gnb = $("#gnb");
+  const menuContainer = $("#header .menuBtn .menuContainer")
   const menuBtn = $("#header .menuBtn .menuContainer");
 
+  // Menu button
   menuBtn.on("click", function () {
     gnb.toggleClass("open");
+    menuContainer.toggleClass("open")
   })
 
+  // mainvisual
   const mainVisualSlider = new Swiper("#mainVisual .mainDescContainer", {
     spaceBetween: 20,
     centeredSlides: true,
@@ -89,22 +95,35 @@
     },
   });
 
+  // project
   const projectSlider = new Swiper("#project .swiperContainer", {
+    slidesPerView: 3,
+    slidesPerGroup: 1,
     spaceBetween: 20,
-    centertedSlides: true,
-    speed: 1000,
-    // loop: true,
+    centeredSlides: false,
+    loop: true,
+    // mousewheel: true,
+    navigation :{
+      prevEl: "#project .prev",
+      nextEl: "#project .next"
+    }
   });
 
+  // news
   const newsSlider = new Swiper("#news .newsContainer", {
-    direction: "horizontal",
     spaceBetween: 20,
-    centertedSlides: true,
-    speed: 1000,
-    slidesPerView: 1,
+    centertedSlides: false,
+    // speed: 1000,
+    slidesPerView: 3,
+    slidesPerGroup: 1,
     loop: false,
+    navigation :{
+      prevEl: "#news .prev",
+      nextEl: "#news .next"
+    }
   });
 
+  // fullpage
   $("#main").fullpage({
     scrollingSpeed: 700,
     scrollHorizontally: true,
