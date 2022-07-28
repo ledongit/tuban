@@ -389,6 +389,8 @@ section {
   position: relative;
   height: 100vh;
   overflow: hidden;
+  background-image: url("../images/main/project-bg.png");
+  background-color: #eee;
   .newsCharacter {
     position: absolute;
     top: 40px;
@@ -472,7 +474,7 @@ section {
     bottom: 20%;
     color: #2c99e4;
     margin-left: 180px;
-    z-index: -1;
+    // z-index: -1;
   }
   .arrowBox {
     display: flex;
@@ -485,7 +487,7 @@ section {
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: #e7e7e7;
+      background-color: #d7d7d7;
       cursor: pointer;
       &.prev {
         margin-right: 20px;
