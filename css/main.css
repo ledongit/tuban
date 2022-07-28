@@ -17,7 +17,8 @@ section {
   position: relative;
   height: calc(100vh - 60px);
   overflow: hidden;
-  background-color: #193b90;
+  background-image: url("../images/main/mainvisual-bg.jpg");
+  background-size: cover;
 }
 #mainVisual .mainBgContainer {
   overflow: hidden;
@@ -157,7 +158,7 @@ section {
   transition: all 0.4s ease;
 }
 #mainVisual .scrollBtn {
-  z-index: 99;
+  z-index: 10;
   position: absolute;
   bottom: 60px;
   left: 50%;
@@ -244,6 +245,9 @@ section {
 #project .projectContainer .projectDesc {
   color: #fff;
 }
+#project .projectContainer .swiper-slide:not(.swiper-slide-active) {
+  opacity: 0 !important;
+}
 #project .swiperContainer {
   display: flex;
   position: relative;
@@ -252,15 +256,50 @@ section {
   align-items: center;
   flex-direction: column;
   overflow: hidden;
+  margin-right: 60px;
 }
 #project .swiperContainer ul li {
   position: relative;
+}
+#project .swiperContainer ul li a[data-project=larva]:after {
+  border-color: #f8c10b;
+}
+#project .swiperContainer ul li a[data-project=larva-kids]:after {
+  border-color: #f8c10b;
+}
+#project .swiperContainer ul li a[data-project=dinocore]:after {
+  border-color: #1dd7a2;
+}
+#project .swiperContainer ul li a[data-project=wingcle]:after {
+  border-color: #a25e34;
+}
+#project .swiperContainer ul li a[data-project=rotary-park]:after {
+  border-color: #6d458b;
+}
+#project .swiperContainer ul li a[data-project="vicky&johnny"]:after {
+  border-color: #d12301;
+}
+#project .swiperContainer ul li a[data-project=oscars-oasis]:after {
+  border-color: #5d8301;
 }
 #project .swiperContainer ul li a {
   display: flex;
   flex-direction: column;
   position: relative;
   margin: auto;
+}
+#project .swiperContainer ul li a:after {
+  content: "";
+  border: 2px solid;
+  opacity: 0;
+  margin: auto;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transition: all 0.3s ease;
 }
 #project .swiperContainer ul li a img {
   max-width: 100%;
@@ -275,9 +314,35 @@ section {
   font-weight: 500;
   color: #fff;
 }
+#project .swiperContainer ul li.projectHover a:after {
+  opacity: 1;
+  border: 10px solid;
+}
+#project .swiperContainer ul li.projectHover a[data-project=larva]:after {
+  border-color: #f8c10b;
+}
+#project .swiperContainer ul li.projectHover a[data-project=larva-kids]:after {
+  border-color: #f8c10b;
+}
+#project .swiperContainer ul li.projectHover a[data-project=dinocore]:after {
+  border-color: #1dd7a2;
+}
+#project .swiperContainer ul li.projectHover a[data-project=wingcle]:after {
+  border-color: #a25e34;
+}
+#project .swiperContainer ul li.projectHover a[data-project=rotary-park]:after {
+  border-color: #6d458b;
+}
+#project .swiperContainer ul li.projectHover a[data-project="vicky&johnny"]:after {
+  border-color: #d12301;
+}
+#project .swiperContainer ul li.projectHover a[data-project=oscars-oasis]:after {
+  border-color: #5d8301;
+}
 #project .swiperContainer .arrowBox {
   display: flex;
   width: 100%;
+  margin-top: 20px;
 }
 #project .swiperContainer .arrowBox .arrow {
   position: relative;
@@ -694,9 +759,13 @@ section {
   #project .swiperContainer {
     flex-basis: auto;
     margin-top: 200px;
+    margin-right: 0;
   }
   #project .swiperContainer ul li {
     width: 210px !important;
+  }
+  #project .swiperContainer .arrowBox {
+    display: none;
   }
   #project .projectContainer {
     top: 10%;
@@ -749,6 +818,9 @@ section {
     font-weight: 300;
   }
   #news .newsContainer ul li a .moreBtn {
+    display: none;
+  }
+  #news .arrowBox {
     display: none;
   }
 }

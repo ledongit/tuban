@@ -374,3 +374,77 @@
     }
   }
 }
+@media all and (max-width: 450px) {
+  @media all and (min-height: 700px) {
+    .about {
+      height: 110vh;
+    }
+  }
+  #subvisual {
+    .subvisualTxt {
+      p {
+        font-size: 40px;
+      }
+    }
+  }
+  .about {
+    .aboutTitle {
+      h2 {
+        font-size: 40px;
+      }
+    }
+    .whoWeAre {
+      padding-top: 210px;
+      h3 {
+        font-size: 25px;
+      }
+      p {
+        font-size: 13px;
+        line-height: 1.3;
+      }
+    }
+    .aboutBox {
+      .aboutInner {
+        width: 280px;
+        height: 400px;
+        .items {
+          margin: 20px 0;
+          &:after {
+            width: 200px;
+            margin-top: 90px;
+          }
+          span {
+            font-size: 15px;
+          }
+          p {
+            font-size: 40px;
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+  .whatwedo {
+    .whatwedoTitle {
+      h3 {
+        font-size: 40px;
+      }
+    }
+    .whatItem {
+      &:before {
+        top: 80px;
+      }
+      .item {
+        padding-right: 20px;
+      }
+    }
+    .whatTitle {
+      font-size: 30px;
+      font-weight: 200;
+    }
+    .whatDesc {
+      font-size: 13px;
+      font-weight: 200;
+    }
+  }
+}
