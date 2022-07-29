@@ -71,12 +71,15 @@ button {
       background-color: #fff;
       &:nth-child(1) {
         top: 10px;
+        transition: all 0.3s ease;
       }
       &:nth-child(2) {
         top: 24px;
+        transition: all 0.3s ease;
       }
       &:nth-child(3) {
         top: 38px;
+        transition: all 0.3s ease;
       }
     }
   }
@@ -87,13 +90,16 @@ button {
           &:nth-child(1) {
             top: 24px;
             transform: rotate(45deg);
+            transition: all 0.3s ease;
           }
           &:nth-child(2) {
             width: 0;
+            transition: all 0.3s ease;
           }
           &:nth-child(3) {
             top: 24px;
             transform: rotate(-45deg);
+            transition: all 0.3s ease;
           }
         }
       }
@@ -202,6 +208,10 @@ button {
     .eng {
       color: rgba(#fff, 0.6);
       cursor: pointer;
+      transition: all 0.5s ease;
+      &:hover {
+        color: #fff;
+      }
     }
   }
 }

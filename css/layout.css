@@ -73,23 +73,29 @@ button {
 }
 .menuBtn .hamburgerBtn span:nth-child(1) {
   top: 10px;
+  transition: all 0.3s ease;
 }
 .menuBtn .hamburgerBtn span:nth-child(2) {
   top: 24px;
+  transition: all 0.3s ease;
 }
 .menuBtn .hamburgerBtn span:nth-child(3) {
   top: 38px;
+  transition: all 0.3s ease;
 }
 .menuBtn .menuContainer.open .hamburgerBtn span:nth-child(1) {
   top: 24px;
   transform: rotate(45deg);
+  transition: all 0.3s ease;
 }
 .menuBtn .menuContainer.open .hamburgerBtn span:nth-child(2) {
   width: 0;
+  transition: all 0.3s ease;
 }
 .menuBtn .menuContainer.open .hamburgerBtn span:nth-child(3) {
   top: 24px;
   transform: rotate(-45deg);
+  transition: all 0.3s ease;
 }
 
 #gnb {
@@ -194,6 +200,10 @@ button {
 #header .header-language .eng {
   color: rgba(255, 255, 255, 0.6);
   cursor: pointer;
+  transition: all 0.5s ease;
+}
+#header .header-language .eng:hover {
+  color: #fff;
 }
 
 #footer {

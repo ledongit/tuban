@@ -65,12 +65,13 @@
 </main>
 
 <script>
-
   const gnb = $("#gnb");
   const menuContainer = $("#header .menuBtn .menuContainer")
   const menuBtn = $("#header .menuBtn .menuContainer");
   const projectItem = $("#project .swiperContainer ul .swiper-slide");
   const headerFrame = $("#headerLayout .frameColor")
+
+
 
   // Menu button
   menuBtn.on("click", function () {
@@ -98,6 +99,16 @@
   });
 
   // project
+  const projectBgslider = new Swiper("#project .projectBg", {
+    slidesPerView: 1,
+    centeredSlides: true,
+    effect: "fade",
+    navigation :{
+      prevEl: "#project .prev",   
+      nextEl: "#project .next"
+    }
+  })
+
   const projectImgSlider = new Swiper("#project .swiperContainer", {
     slidesPerView: 3,
     slidesPerGroup: 1,
@@ -119,13 +130,30 @@
     navigation :{
       prevEl: "#project .prev",   
       nextEl: "#project .next"
-    }
+    },
+    // on: {
+    //   slideChange: function () {
+    //     projectItem.removeClass("projectHover")
+    //     console.log(projectItem)
+    //     // $($(this)[0].slides[$(this)[0].activeIndex][0]).addClass("projectHover")
+    //     const activeSlide = $($(this)[0].slides).find("swiper-slide-active");
+
+    //     $(activeSlide.prevObject[0]).addClass("projectHover")
+
+    //     // console.log($(this)[0].activeIndex)
+    //     // projectDescSlider.slides[projectDescSlider.activeIndex].classList.add("projectHover")
+    //     // .addClass("projectHover")
+    //     // console.log(this)
+    //   }
+    // }
   })
   projectItem.on("mouseenter", function () {
     projectItem.removeClass("projectHover")
+    console.log($(this))
     $(this).addClass("projectHover")
     // const character = $(this).children().attr("data-project")
     // headerFrame.addClass("frame-" + character)
+
 
   })  
 
@@ -140,6 +168,20 @@
     navigation :{
       prevEl: "#news .prev",
       nextEl: "#news .next"
+    },
+    on: {
+      slideNextTransitionEnd: function () {
+        gsap.to("#news .newsCharacter", {
+          left: "500px",
+          top: "-100px",
+        })
+      },
+      reachBeginning: function () {
+        gsap.to("#news .newsCharacter", {
+          top: "40px",
+          left: "200px",
+        })
+      }
     }
   });
 
@@ -160,7 +202,7 @@
 
   
   const topBtn = $("#footer .footer-inner .topButton")
-  console.log($("html, body"))
+  // console.log($("html, body"))
   $(topBtn).on("click", function () {
     $("html, body").animate({
       scrollTop: 0
